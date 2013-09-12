@@ -1,0 +1,11 @@
+# DO NOT COMMIT THIS TO YOUR SOURCE CONTROL
+---
+:aws:
+  :access_key_id: SECRET_KEY_ID
+  :secret_access_key: SECRET_ACCESS_KEY
+:acf:
+  :distribution_id: DISTRIBUTION_ID
+:deploy:
+  :from_folder: "./build"
+  :s3_bucket: "my-s3-bucket"
+

@@ -1,0 +1,26 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws (2.9.1)
+      http_connection
+      uuidtools
+      xml-simple
+    colored (1.2)
+    haml (4.0.3)
+      tilt
+    http_connection (1.4.4)
+    rake (10.1.0)
+    simple-cloudfront-invalidator (1.0.1)
+      colored (= 1.2)
+    tilt (1.4.1)
+    uuidtools (2.1.4)
+    xml-simple (1.1.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  aws
+  haml
+  rake
+  simple-cloudfront-invalidator

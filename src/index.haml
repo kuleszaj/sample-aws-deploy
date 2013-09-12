@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %link(rel="stylesheet" href="index.css" type="text/css")
+    %title Sample Deployment to AWS S3 with CloudFront Invalidation
+  %body
+    .title
+      %h1 Sample Deployment to AWS S3 with CloudFront Invalidation
+    .line
+    %ol
+      %li 
+        %code bundle install
+      %li 
+        %code bundle exec rake -vT
+      %li 
+        %code bundle exec rake aws:deploy
