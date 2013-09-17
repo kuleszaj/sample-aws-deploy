@@ -9,6 +9,7 @@ GEM
     haml (4.0.3)
       tilt
     http_connection (1.4.4)
+    mime-types (1.25)
     rake (10.1.0)
     simple-cloudfront-invalidator (1.0.1)
       colored (= 1.2)
@@ -22,5 +23,6 @@ PLATFORMS
 DEPENDENCIES
   aws
   haml
+  mime-types
   rake
   simple-cloudfront-invalidator

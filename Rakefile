@@ -2,6 +2,7 @@ require 'aws'
 require 'yaml'
 require 'logger'
 require 'simple-cloudfront-invalidator'
+require 'mime-types'
 
 log = Logger.new(STDOUT)
 log.level = Logger::INFO
@@ -36,8 +37,11 @@ namespace :aws do
     log.info("Beginning to deploy files")
 
     Dir["**/*"].each do |file|
-      log.debug("Uploading #{file}")
-      bucket.put(file,File.read(file)) unless File.directory?(file)
+      next if File.directory?(file)
+      mime_type = MIME::Types.type_for(file).first.simplified
+      log.debug("Uploading #{file} with Content-Type: #{mime_type}")
+      headers = {'content-type' => mime_type}
+      bucket.put(file,File.read(file),{},'public-read',headers)
     end
 
     log.info("Done!")
